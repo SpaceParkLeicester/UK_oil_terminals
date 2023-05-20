@@ -6,7 +6,7 @@ LONG_DESCRIPTION = 'Functions and modules related to data of UK oil terminals'
 
 # Setting up
 setup(
-        name="UK-oil-terminals", 
+        name="UK_oil_terminals", 
         version=VERSION,
         author="Vardhan Raj Modi",
         author_email="vardhan609@gmail.com",
