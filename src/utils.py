@@ -11,11 +11,11 @@ from shapely.geometry import mapping
 
 import logging
 import logging.config
-logging.config.fileConfig('UK-oil-terminals/logger.ini')
+logging.config.fileConfig('logger.ini')
 
 class OilTerminals:
     """Class functions of terminal data for Planet"""
-    terminal_file_path = 'UK-oil-terminals/data/uk_oil_terminals.xlsx'
+    terminal_file_path = 'data/uk_oil_terminals.xlsx'
     try:
         assert os.path.exists(terminal_file_path) is True
     except AssertionError:
