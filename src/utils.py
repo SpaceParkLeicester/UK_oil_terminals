@@ -35,7 +35,15 @@ class OilTerminals:
         self.locations = self.df['Region'].tolist()
         self.locations = [loc.split(',')[0].lower() for loc in self.locations]
         return self.locations
-               
+
+    @staticmethod
+    def xlsx_to_csv(file_path:str = None, csv_file_name:str = None):
+        """Convert a xlsx file to csv"""
+        df = pd.read_excel(file_path, skiprows = 1)
+        csv_file_path = os.path.join(os.path.dirname(file_path), csv_file_name)
+        df.to_csv(csv_file_path, index = None, header = True)
+        return csv_file_path
+    
     @staticmethod
     def bounding_box(
             center_lat: np.float64 = None,          

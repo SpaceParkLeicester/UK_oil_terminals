@@ -1,1 +1,18 @@
 # UK Oil Terminals
+
+This repository consists of functions to read and manipulate `UK Oil Terminal` data. The data both in `xlsx` and `csv` format can be found in `UK-oil-terminals/data`. Data is displayed here.
+
+| **Name,Region-Country,Longitude,Latitude**                                                                                                        |
+|:------------------------------------------------------------------------------------------------------------------------------:|
+| Repsol Sinopec Resources UK Limited (Flotta),"Flotta, Scotland",-3.12135046813497,58.8383479335377                             |
+| INEOS Forties Pipeline System (Dalmeny),"Dalmney, Scotland",-3.36830172457108,55.9761180374011                                 |
+| INEOS Group Ltd. (Finnart Ocean Terminal),"Garelochhead, Scotland",-4.83564952248564,56.1127042754096                          |
+| Sullom Voe Oil Terminal,"Shetland, Scotland",-1.28230752514286,60.469057961832                                                 |
+| "Valero Energy Pembrokeshire, Puma Energy (UK) Ltd. (Milford Haven)","Milford Haven, Wales",-5.02620902578327,51.6876557630042 |
+| Zenith Energy Bantry Bay Terminals Ltd.,"Bantry, Ireland",-9.52147185196968,51.6843458224901                                   |
+| Navigator Terminals UK Ltd. (North Tees),"Middlesbrough, Engnland",-1.21195832952916,54.6371460830532                          |
+| Associated Petroleum Terminals Ltd. (Immingham Oil Terminal),"Immingham, England",-0.254176841975966,53.6442983954962          |
+| Tetney Marine Terminal,"Tetney, England",0.0010104666329931,53.4999288170297                                                   |
+| BP Oil Fuel Terminal (Hamble),"Hamble-le-Rice, England",-1.36278575226035,50.8328180612875                                     |
+| Tranmere Oil Terminal,"Tranmere, England",-3.0040700299757,53.3764403331972                                                    |
+| Stanlow Terminals Ltd,"Stanlow, England",-2.85289490823092,53.2690630242847  
