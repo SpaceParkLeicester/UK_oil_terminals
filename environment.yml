@@ -1,0 +1,16 @@
+name: uk_oil
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - geopandas
+  - geojson
+  - shapely
+  - ca-certificates
+  - openssl
+  - pytest
+  - certifi
+  - colorlog
+  - openpyxl
