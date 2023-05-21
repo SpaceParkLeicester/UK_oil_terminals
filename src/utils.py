@@ -89,7 +89,7 @@ class OilTerminals:
     def geojson_data(self)-> None:
         """Getting GeoJSON bbox for each location
         
-        Retruns: Dictionary of Location name and geojson format 
+        Returns: Dictionary of Location name and geojson format 
         """
         # Getting all the Lat and Lon
         location_geojson = {}
