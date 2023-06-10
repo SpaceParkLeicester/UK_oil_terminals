@@ -85,14 +85,10 @@ class OilTerminals:
         geom = res.to_crs('EPSG:4326').iloc[0]
         # Getting Polygon WKT string
         return geom.wkt    
-
-    def geojson_data(self)-> None:
-        """Getting GeoJSON bbox for each location
-        
-        Returns: Dictionary of Location name and geojson format 
-        """
-        # Getting all the Lat and Lon
-        location_geojson = {}
+    
+    def location_wkt(self)-> None:
+        """Dictionary of location and WKT polygon"""
+        self.location_polygon_wkt = {}
         lat_lon = list(zip(self.df['Lat'], self.df['Lon']))
         for index, row in self.df.iterrows():
             location = row['Region']
@@ -101,8 +97,19 @@ class OilTerminals:
             wkt_string = OilTerminals.bounding_box(
                 center_lat = lat_lon[index][0],
                 center_lon = lat_lon[index][1])
+            self.location_polygon_wkt[location] = wkt_string
+        return self.location_polygon_wkt       
+
+    def geojson_data(self)-> None:
+        """Getting GeoJSON bbox for each location
+        
+        Returns: Dictionary of Location name and geojson format 
+        """
+        # Getting all the Lat and Lon
+        self.location_geojson = {}
+        for location, wkt_string in self.location_polygon_wkt.items():
             geojson_string = geojson.dumps(mapping(loads(wkt_string)))
             geojson_dict = json.loads(geojson_string)
-            location_geojson[location] = geojson_dict
-        return location_geojson
+            self.location_geojson[location] = geojson_dict
+        return self.location_geojson
 
