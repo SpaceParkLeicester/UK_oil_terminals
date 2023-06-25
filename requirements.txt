@@ -1,7 +1,6 @@
 colorama
 colorlog
 folium
-gdal
 geojson
 geopandas
 mapclassify
