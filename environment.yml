@@ -1,0 +1,16 @@
+name: uk_oil_terminals
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pre-commit
+  - pip
+  - click
+  - colorlog
+  - pip:
+    - shapely
+    - geopandas
+    - numpy
+    - geojson
