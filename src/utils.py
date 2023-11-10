@@ -113,3 +113,12 @@ class OilTerminals:
             self.location_geojson[location] = geojson_dict
         return self.location_geojson
 
+if __name__ == "__main__":
+    half_side = 10
+    center_lon, center_lat = -0.737241,53.735410
+    src = OilTerminals()
+    wkt = src.bounding_box(
+        center_lat = center_lat,
+        center_lon = center_lon,
+        half_side = half_side)
+    print(wkt)
